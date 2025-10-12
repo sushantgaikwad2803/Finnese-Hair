@@ -5,617 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finnese Hair & Beauty Salon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: #d4af37;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo span {
-            color: #8a6d3b;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #d4af37;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #333;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            margin-top: 70px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #d4af37;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #b8941f;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 3px;
-            background-color: #d4af37;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section-title p {
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-
-        .service-content {
-            padding: 25px;
-        }
-
-        .service-content h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .service-content p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .service-price {
-            color: #d4af37;
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        .about-image {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Team Section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .team-member {
-            text-align: center;
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-        }
-
-        .member-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 20px;
-            border: 5px solid #f5f5f5;
-        }
-
-        .member-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .team-member h3 {
-            font-size: 22px;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .team-member p {
-            color: #d4af37;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .team-member .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .team-member .social-links a {
-            color: #666;
-            transition: color 0.3s;
-        }
-
-        .team-member .social-links a:hover {
-            color: #d4af37;
-        }
-
-        /* Gallery Section */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 250px;
-            position: relative;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(212, 175, 55, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay i {
-            color: white;
-            font-size: 30px;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .contact-icon {
-            background-color: #d4af37;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .contact-details h3 {
-            font-size: 20px;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .contact-details p {
-            color: #666;
-        }
-
-        .contact-form {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        .form-control:focus {
-            border-color: #d4af37;
-            outline: none;
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 60px 0 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background-color: #d4af37;
-            bottom: 0;
-            left: 0;
-        }
-
-        .footer-column p {
-            margin-bottom: 20px;
-            color: #bbb;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #bbb;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #d4af37;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #444;
-            border-radius: 50%;
-            color: white;
-            transition: all 0.3s;
-        }
-
-        .social-icons a:hover {
-            background-color: #d4af37;
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #bbb;
-            font-size: 14px;
-        }
-
-        /* Page Styles */
-        .page {
-            display: none;
-            padding-top: 100px;
-            min-height: calc(100vh - 100px);
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .about-content, .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            nav ul.show {
-                display: flex;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo" data-page="home">FINESSE<span>HAIR & BEAUTY SALON</span></a>
+            <img src="gallery/logo.png" alt="">
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
             <nav>
                 <ul>
                     <li><a href="#" data-page="home">Home</a></li>
-                    <li><a href="#" data-page="">Services</a></li>
+                    <li><a href="#" data-page="services">Services</a></li>
                     <li><a href="#" data-page="about">About</a></li>
-                    <li><a href="#" data-page="">Our Team</a></li>
-                    <li><a href="#" data-page="">Gallery</a></li>
+                    <li><a href="#" data-page="gallery">Gallery</a></li>
                     <li><a href="#" data-page="contact">Contact</a></li>
                 </ul>
             </nav>
@@ -648,7 +53,7 @@
                     <div class="service-content">
                         <h3>Hair Styling</h3>
                         <p>From classic cuts to modern trends, our stylists create looks that complement your personality.</p>
-                        <div class="service-price">Starting from $50</div>
+                        <!-- <div class="service-price">Starting from $50</div> -->
                     </div>
                 </div>
                 <div class="service-card">
@@ -658,7 +63,7 @@
                     <div class="service-content">
                         <h3>Hair Coloring</h3>
                         <p>Transform your look with our expert coloring services using premium products.</p>
-                        <div class="service-price">Starting from $80</div>
+                        <!-- <div class="service-price">Starting from $80</div> -->
                     </div>
                 </div>
                 <div class="service-card">
@@ -668,7 +73,7 @@
                     <div class="service-content">
                         <h3>Facial Treatments</h3>
                         <p>Rejuvenate your skin with our customized facial treatments for a radiant glow.</p>
-                        <div class="service-price">Starting from $70</div>
+                        <!-- <div class="service-price">Starting from $70</div> -->
                     </div>
                 </div>
                 <div class="service-card">
@@ -678,7 +83,7 @@
                     <div class="service-content">
                         <h3>Manicure & Pedicure</h3>
                         <p>Pamper your hands and feet with our luxurious nail care services.</p>
-                        <div class="service-price">Starting from $40</div>
+                        <!-- <div class="service-price">Starting from $40</div> -->
                     </div>
                 </div>
                 <div class="service-card">
@@ -688,7 +93,7 @@
                     <div class="service-content">
                         <h3>Makeup Artistry</h3>
                         <p>From natural day looks to glamorous evening makeup for special occasions.</p>
-                        <div class="service-price">Starting from $60</div>
+                        <!-- <div class="service-price">Starting from $60</div> -->
                     </div>
                 </div>
                 <div class="service-card">
@@ -698,7 +103,7 @@
                     <div class="service-content">
                         <h3>Spa Treatments</h3>
                         <p>Relax and rejuvenate with our range of therapeutic spa treatments.</p>
-                        <div class="service-price">Starting from $90</div>
+                        <!-- <div class="service-price">Starting from $90</div> -->
                     </div>
                 </div>
             </div>
@@ -725,9 +130,33 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="section-title">
+                <h2>Owners</h2>
+                <p>Meet the talented professionals who make Finnese exceptional.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sophia Martinez">
+                    </div>
+                    <h3>Sophia Martinez</h3>
+                    <p>Senior Stylist</p>
+                    <p>With over 15 years of experience, Sophia specializes in precision cutting and color correction.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Emma Johnson">
+                    </div>
+                    <h3>Emma Johnson</h3>
+                    <p>Color Specialist</p>
+                    <p>Emma is renowned for her creative color techniques and stays updated with the latest trends.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Team Page -->
+    <!-- Team Page
     <section id="team" class="page">
         <div class="container">
             <div class="section-title">
@@ -789,7 +218,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Gallery Page -->
     <section id="gallery" class="page">
@@ -800,49 +229,73 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Salon Interior">
+                    <img src="gallery/g1.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1595475888562-6d7676f4c36e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Hair Styling">
+                    <img src="gallery/g6.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596703263926-eb92c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Makeup">
+                    <img src="gallery/g3.webp" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Nail Art">
+                    <img src="gallery/g4.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Beauty Treatment">
+                    <img src="gallery/g2.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Spa">
+                    <img src="gallery/g7.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Haircut">
+                    <img src="gallery/g5.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Hair Color">
+                    <img src="gallery/g11.jpg" alt="Hair Styling">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/g8.jpg" alt="Salon Interior">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/g9.jpg" alt="Hair Styling">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/g10.jpg" alt="Salon Interior">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/g12.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
@@ -866,7 +319,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Our Location</h3>
-                            <p>123 Beauty Street, Downtown<br>City, State 12345</p>
+                            <p>Shop No 1, Rajni Apt, S.K. Bole Road,<br>Agar Bazar, Mumbai 400028</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -875,7 +328,8 @@
                         </div>
                         <div class="contact-details">
                             <h3>Phone Number</h3>
-                            <p>(123) 456-7890</p>
+                            <p>9773278656</p>
+                            <p>9820673478</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -884,7 +338,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Email Address</h3>
-                            <p>info@finnese.com</p>
+                            <p>rinkusheth8656@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -908,8 +362,18 @@
                             <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
+                            <label for="email">Select Service</label>
+                            <select name="Service" class="form-control" 
+                                style="width: 100%; padding: 7px; padding-right: 12px; border-radius: 5px;">
+                                <option value="">Select Service</option>
+                                <option value="haircut">Haircut</option>
+                                <option value="coloring">Hair Coloring</option>
+                                <option value="facial">Facial</option>
+                                <option value="makeup">Makeup</option>
+                                <option value="manicure">Manicure</option>
+                                <option value="pedicure">Pedicure</option>
+                                <option value="mens-grooming">Men's Grooming</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
@@ -920,6 +384,7 @@
                 </div>
             </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.024119780689!2d72.83393319999999!3d19.0186588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cec6a744a821%3A0xe0c7e1b998dea76a!2sFinesse%20Hair%20%26%20Beauty%20Salon!5e0!3m2!1sen!2sin!4v1759564418326!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <!-- Footer -->
@@ -930,10 +395,10 @@
                     <h3>About Finnese</h3>
                     <p>Finnese Hair & Beauty Salon offers premium beauty services in a luxurious and welcoming environment. Our team of certified professionals is dedicated to helping you look and feel your best.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/thefinessesalon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/the_finesse_salon/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@makeupbyrinkusheth "><i class="fa-brands fa-youtube"></i></a>
+                        <!-- <a href="#"><i class="fab fa-pinterest"></i></a> -->
                     </div>
                 </div>
                 <div class="footer-column">
@@ -942,7 +407,6 @@
                         <li><a href="#" data-page="home">Home</a></li>
                         <li><a href="#" data-page="services">Services</a></li>
                         <li><a href="#" data-page="about">About Us</a></li>
-                        <li><a href="#" data-page="team">Our Team</a></li>
                         <li><a href="#" data-page="gallery">Gallery</a></li>
                         <li><a href="#" data-page="contact">Contact</a></li>
                     </ul>
@@ -975,47 +439,8 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-
-        // Page Navigation
-        document.querySelectorAll('a[data-page]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetPage = this.getAttribute('data-page');
-                
-                // Hide all pages
-                document.querySelectorAll('.page').forEach(page => {
-                    page.classList.remove('active');
-                });
-                
-                // Show target page
-                document.getElementById(targetPage).classList.add('active');
-                
-                // Close mobile menu if open
-                document.querySelector('nav ul').classList.remove('show');
-                
-                // Scroll to top
-                window.scrollTo(0, 0);
-            });
-        });
-
-        // Contact Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-
-        // Newsletter Form Submission
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing to our newsletter!');
-            this.reset();
-        });
+    <script src="app.js">
+      
     </script>
 </body>
 </html>
