@@ -1,5 +1,5 @@
-  // Mobile Menu Toggle
-  document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+// Mobile Menu Toggle
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('show');
 });
 
@@ -32,9 +32,68 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     this.reset();
 });
 
-// Newsletter Form Submission
-// document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-//     e.preventDefault();
-//     alert('Thank you for subscribing to our newsletter!');
-//     this.reset();
-// });
+// Auto-Changing Slider
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.slider-dot');
+let currentSlide = 0;
+let slideInterval;
+
+// Function to show a specific slide
+function showSlide(n) {
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Update current slide index
+    currentSlide = (n + slides.length) % slides.length;
+    
+    // Add active class to current slide and dot
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+// Function to show next slide
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+// Start auto-sliding
+function startSlideShow() {
+    slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+// Stop auto-sliding
+function stopSlideShow() {
+    clearInterval(slideInterval);
+}
+
+// Event listeners for dots
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        stopSlideShow();
+        showSlide(index);
+        startSlideShow();
+    });
+});
+
+// Pause auto-sliding when user hovers over slider
+const slider = document.querySelector('.hero-slider');
+slider.addEventListener('mouseenter', stopSlideShow);
+slider.addEventListener('mouseleave', startSlideShow);
+
+// Initialize the slider
+startSlideShow();
+
+// FIXED: Header background change on scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        // When scrolled - make header more solid/darker
+        // header.style.backgroundColor = '#1a1a1a'; // Darker shade
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+    } else {
+        // When at top - original color
+        // header.style.backgroundColor = '#2c2c2c'; // Original color from CSS
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    }
+});
