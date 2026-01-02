@@ -19,7 +19,6 @@
 } */
 
 :root {
-    /* Premium Champagne Rose Gold Theme */
     --primary-color: #C9A063;    
     --secondary-color: #F3E8D5;   
     --accent-color: #B8895B;      
@@ -119,7 +118,7 @@ nav ul li a:hover::after {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: var(--text-dark);
+    color: var(--accent-color);
 }
 
 /* Hero Slider Styles */
@@ -884,7 +883,7 @@ footer {
         margin-left: 50%;
     }
     
-      nav ul {
+    nav ul {
         display: none;
         position: absolute;
         top: 100%;
@@ -970,5 +969,4 @@ footer {
 /* Optional: Staggered animation for list items */
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
-
 .delay-3 { transition-delay: 0.3s; }
