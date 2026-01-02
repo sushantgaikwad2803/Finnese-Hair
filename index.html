@@ -7,12 +7,13 @@
     <link rel="shortcut icon" href="gallery/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <img src="gallery/logo.png" alt="">
+            <img src="gallery/logo.png" alt="Finesse Salon Logo">
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -34,7 +35,7 @@
             <!-- Slide 1 -->
             <div class="slide active" style="background-image: url('gallery/bg.jpg');">
                 <div class="slide-overlay"></div>
-                <div class="slide-content">
+                <div class="slide-content reveal">
                     <h1>Experience Luxury & Elegance</h1>
                     <p>At Finnese, we believe that beauty is an art form. Our expert stylists and beauticians are dedicated to enhancing your natural beauty with precision and care.</p>
                     <a href="#" data-page="contact" class="btn">Book an Appointment</a>
@@ -81,36 +82,37 @@
                 </div>
             </div>
         </div>
-             <!-- Features Section -->
-        <section>
+        
+        <!-- Features Section -->
+        <section  >
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Why Choose Finesse</h2>
                     <p>Discover what makes our salon the preferred choice for discerning clients</p>
                 </div>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card reveal delay-1">
                         <div class="feature-icon">
                             <i class="fas fa-award"></i>
                         </div>
                         <h3>Expert Stylists</h3>
                         <p>Our team consists of certified professionals with years of experience in the latest beauty trends.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal delay-2">
                         <div class="feature-icon">
                             <i class="fas fa-spa"></i>
                         </div>
                         <h3>Premium Products</h3>
                         <p>We use only the highest quality, professional-grade products for all our services.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal delay-3">
                         <div class="feature-icon">
                             <i class="fas fa-heart"></i>
                         </div>
                         <h3>Personalized Service</h3>
                         <p>Every treatment is customized to your unique needs and preferences for optimal results.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal delay-4">
                         <div class="feature-icon">
                             <i class="fas fa-clock"></i>
                         </div>
@@ -122,46 +124,43 @@
         </section>
 
         <!-- Services Preview Section -->
-        <section class="services-preview">
+        <section class="services-preview" id="s2">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title reveal">
                     <h2>Our Signature Services</h2>
                     <p>Indulge in our range of premium hair and beauty treatments</p>
                 </div>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card reveal delay-1">
                         <div class="service-img">
                             <img src="gallery/s12.jpeg" alt="Hair Styling">
                         </div>
                         <div class="service-content">
                             <h3>Hair Styling</h3>
                             <p>From classic cuts to modern trends, our stylists create looks that complement your personality.</p>
-                            <!-- <div class="service-price">Starting from $50</div> -->
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card reveal delay-2">
                         <div class="service-img">
                             <img src="gallery/s13.jpeg" alt="Hair Coloring">
                         </div>
                         <div class="service-content">
                             <h3>Hair Coloring</h3>
                             <p>Transform your look with our expert coloring services using premium products.</p>
-                            <!-- <div class="service-price">Starting from $80</div> -->
                         </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card reveal delay-3">
                         <div class="service-img">
                             <img src="gallery/s3.avif" alt="Bridal Makeup">
                         </div>
                         <div class="service-content">
                             <h3>Bridal Makeup</h3>
                             <p>Specialized bridal packages for your perfect day with Rinku Ssheth, international bridal artist.</p>
-                            <!-- <div class="service-price">Packages from $200</div> -->
                         </div>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 40px;">
-                    <a href="#" class="btn" data-page="services">View All Services</a>
+                    <a href="#" class="btn reveal" data-page="services">View All Services</a>
                 </div>
             </div>
         </section>
@@ -169,9 +168,9 @@
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="container cta-content">
-                <h2>Ready for Your Transformation?</h2>
-                <p>Book your appointment today and experience the Finnese difference. Our team is ready to help you look and feel your absolute best.</p>
-                <a href="#" class="btn" data-page="contact">Book Now</a>
+                <h2 class="reveal">Ready for Your Transformation?</h2>
+                <p class="reveal delay-1">Book your appointment today and experience the Finnese difference. Our team is ready to help you look and feel your absolute best.</p>
+                <a href="#" class="btn reveal delay-2" data-page="contact">Book Now</a>
             </div>
         </section>
     </section>
@@ -179,69 +178,63 @@
     <!-- Services Page -->
     <section id="services" class="page">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Our Services</h2>
                 <p>We offer a wide range of hair and beauty services to help you look and feel your best.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card" id="hair">
+                <div class="service-card reveal delay-1" id="hair">
                     <div class="service-img">
                         <img src="gallery/s15.jpeg" alt="Hair Styling">
                     </div>
                     <div class="service-content">
                         <h3>Hair Styling</h3>
                         <p>From classic cuts to modern trends, our stylists create looks that complement your personality.</p>
-                        <!-- <div class="service-price">Starting from $50</div> -->
                     </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal delay-2">
                     <div class="service-img">
                         <img src="gallery/s14.jpg" alt="Hair Coloring">
                     </div>
                     <div class="service-content">
                         <h3>Hair Coloring</h3>
                         <p>Transform your look with our expert coloring services using premium products.</p>
-                        <!-- <div class="service-price">Starting from $80</div> -->
                     </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal delay-3">
                     <div class="service-img">
                         <img src="gallery/s16.jpg" alt="Facial Treatments">
                     </div>
                     <div class="service-content">
                         <h3>Facial Treatments</h3>
                         <p>Rejuvenate your skin with our customized facial treatments for a radiant glow.</p>
-                        <!-- <div class="service-price">Starting from $70</div> -->
                     </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal delay-1">
                     <div class="service-img">
                         <img src="gallery/s9.jpg" alt="Manicure & Pedicure">
                     </div>
                     <div class="service-content">
                         <h3>Manicure & Pedicure</h3>
                         <p>Pamper your hands and feet with our luxurious nail care services.</p>
-                        <!-- <div class="service-price">Starting from $40</div> -->
                     </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal delay-2">
                     <div class="service-img">
                         <img src="gallery/s5.jpg" alt="Makeup Artistry">
                     </div>
                     <div class="service-content">
                         <h3>Makeup Artistry</h3>
                         <p>From natural day looks to glamorous evening makeup for special occasions.</p>
-                        <!-- <div class="service-price">Starting from $60</div> -->
                     </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal delay-3">
                     <div class="service-img">
                         <img src="gallery/s7.jpeg" alt="Spa Treatments">
                     </div>
                     <div class="service-content">
                         <h3>Spa Treatments</h3>
                         <p>Relax and rejuvenate with our range of therapeutic spa treatments.</p>
-                        <!-- <div class="service-price">Starting from $90</div> -->
                     </div>
                 </div>
             </div>
@@ -251,37 +244,35 @@
     <!-- About Page -->
     <section id="about" class="page">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>About Us</h2>
                 <p>Learn more about our story and what makes Finnese special.</p>
             </div>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text reveal">
                     <h3>Our Story</h3>
                     <p>Founded in 2010, Finnese Hair & Beauty Salon has been dedicated to providing exceptional beauty services in a luxurious and welcoming environment. Our founder, Isabella Finn, envisioned a space where clients could escape the stresses of daily life and indulge in self-care.</p>
                     <p>Over the years, we've built a reputation for excellence, combining traditional techniques with the latest trends in hair and beauty. Our team of certified professionals undergoes continuous training to stay at the forefront of the industry.</p>
                     <p>At Finnese, we believe that everyone deserves to feel beautiful and confident. We take the time to understand your unique needs and preferences, ensuring that you leave our salon looking and feeling your absolute best.</p>
-                    <a href="#" class="btn" data-page="">Meet Our Team</a>
                 </div>
-                <div class="about-image">
+                <div class="about-image reveal delay-1">
                     <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Finnese Salon Interior">
                 </div>
             </div>
         </div>
         <div class="mini_container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Owners</h2>
                 <p>Meet the talented professionals who make Finnese exceptional.</p>
             </div>
             <div class="team-grid">
-                <div class="team-member">
+                <div class="team-member reveal delay-1">
                     <div class="member-img">
-                        <img src="gallery/ab1.jpeg" alt="Sophia Martinez">
+                        <img src="gallery/ab1.jpeg" alt="Rinku Sheth">
                     </div>
-                    <h3> Rinku Sheth</h3>
+                    <h3>Rinku Sheth</h3>
                     <p>Founded and led by Rinku Sheth, an internationally acclaimed celebrity makeup artist and hairstylist, Finesse Salon stands as a symbol of beauty, creativity, and perfection.</p>
-                    <p>With years of professional experience and a flair for transforming every face into a masterpiece, Rinku Sheth has worked with brides, models, and celebrities across the globe — crafting signature looks that define glamour and grace.
-                        At Finesse Hair Beauty & Spa, every client is treated like a star. From bridal transformations and editorial looks to luxury skincare and modern hairstyling, each service is designed to enhance your natural beauty with precision and passion.</p>
+                    <p>With years of professional experience and a flair for transforming every face into a masterpiece, Rinku Sheth has worked with brides, models, and celebrities across the globe — crafting signature looks that define glamour and grace. At Finesse Hair Beauty & Spa, every client is treated like a star. From bridal transformations and editorial looks to luxury skincare and modern hairstyling, each service is designed to enhance your natural beauty with precision and passion.</p>
                 </div>
             </div>
         </div>
@@ -290,78 +281,78 @@
     <!-- Gallery Page -->
     <section id="gallery" class="page">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Our Gallery</h2>
                 <p>Take a look at some of our recent work and salon environment.</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-1">
                     <img src="gallery/g1.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-2">
                     <img src="gallery/g6.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-3">
                     <img src="gallery/g3.webp" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-1">
                     <img src="gallery/g4.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-2">
                     <img src="gallery/g2.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-3">
                     <img src="gallery/g7.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-1">
                     <img src="gallery/g5.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-2">
                     <img src="gallery/g11.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-3">
                     <img src="gallery/g8.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-1">
                     <img src="gallery/g9.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-2">
                     <img src="gallery/g10.jpg" alt="Salon Interior">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal delay-3">
                     <img src="gallery/g12.jpg" alt="Hair Styling">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
@@ -374,12 +365,12 @@
     <!-- Contact Page -->
     <section id="contact" class="page">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Contact Us</h2>
                 <p>Get in touch with us to book an appointment or ask any questions.</p>
             </div>
             <div class="contact-container">
-                <div class="contact-info">
+                <div class="contact-info reveal">
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -418,21 +409,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form reveal delay-1">
                     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="80a5b468-58b7-42dd-96f9-f92ac6b1a3e1">
+                        <input type="hidden" name="access_key" value="533feccf-6bdc-41aa-9f10-9736c50f2201">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" class="form-control" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" class="form-control" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Select Service</label>
-                            <select name="Service" class="form-control" 
-                                style="width: 100%; padding: 7px; padding-right: 12px; border-radius: 5px;">
+                            <label for="service">Select Service</label>
+                            <select id="service" name="service" class="form-control" required>
                                 <option value="">Select Service</option>
                                 <option value="haircut">Haircut</option>
                                 <option value="coloring">Hair Coloring</option>
@@ -445,30 +435,30 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" class="form-control" name="message" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.024119780689!2d72.83393319999999!3d19.0186588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cec6a744a821%3A0xe0c7e1b998dea76a!2sFinesse%20Hair%20%26%20Beauty%20Salon!5e0!3m2!1sen!2sin!4v1759564418326!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.024119780689!2d72.83393319999999!3d19.0186588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cec6a744a821%3A0xe0c7e1b998dea76a!2sFinesse%20Hair%20%26%20Beauty%20Salon!5e0!3m2!1sen!2sin!4v1759564418326!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
+                <div class="footer-column reveal">
                     <h3>About Finnese</h3>
                     <p>Finnese Hair & Beauty Salon offers premium beauty services in a luxurious and welcoming environment. Our team of certified professionals is dedicated to helping you look and feel your best.</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/thefinessesalon"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/the_finesse_salon/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@makeupbyrinkusheth "><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@makeupbyrinkusheth"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-column">
+                <div class="footer-column reveal delay-1">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#" data-page="home">Home</a></li>
@@ -478,26 +468,24 @@
                         <li><a href="#" data-page="contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
+                <div class="footer-column reveal delay-2">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#"  data-page="services">Hair Styling</a></li>
-                        <li><a href="#"  data-page="services">Hair Coloring</a></li>
-                        <li><a href="#"  data-page="services">Facial Treatments</a></li>
-                        <li><a href="#"  data-page="services">Manicure & Pedicure</a></li>
-                        <li><a href="#"  data-page="services">Makeup Artistry</a></li>
-                        <li><a href="#"  data-page="services">Spa Treatments</a></li>
+                        <li><a href="#" data-page="services">Hair Styling</a></li>
+                        <li><a href="#" data-page="services">Hair Coloring</a></li>
+                        <li><a href="#" data-page="services">Facial Treatments</a></li>
+                        <li><a href="#" data-page="services">Manicure & Pedicure</a></li>
+                        <li><a href="#" data-page="services">Makeup Artistry</a></li>
+                        <li><a href="#" data-page="services">Spa Treatments</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="copyright reveal">
                 <p>&copy; 2023 Finnese Hair & Beauty Salon. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="app.js">
-      
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

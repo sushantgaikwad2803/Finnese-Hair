@@ -25,13 +25,6 @@ document.querySelectorAll('a[data-page]').forEach(link => {
     });
 });
 
-// Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    this.reset();
-});
-
 // Auto-Changing Slider
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.slider-dot');
@@ -95,5 +88,56 @@ window.addEventListener('scroll', function() {
         // When at top - original color
         // header.style.backgroundColor = '#2c2c2c'; // Original color from CSS
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    }
+});
+
+// The "Up and Down" Scroll Observer
+const observerOptions = {
+    threshold: 0.1, // Trigger when 10% of the element is visible
+    rootMargin: "0px 0px -50px 0px" // Triggers slightly before the element hits the bottom
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add class when scrolling INTO view
+            entry.target.classList.add('active');
+        } else {
+            // Remove class when scrolling OUT of view 
+            // This makes it work on UP and DOWN scroll
+            entry.target.classList.remove('active');
+        }
+    });
+}, observerOptions);
+
+// Initialize after page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollElements = document.querySelectorAll('.reveal');
+    scrollElements.forEach(el => observer.observe(el));
+});
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert("Thank you! Your message has been sent successfully.");
+            form.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    } catch (error) {
+        alert("Network error. Please try later.");
     }
 });

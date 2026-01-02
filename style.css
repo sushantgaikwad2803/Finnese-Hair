@@ -6,17 +6,34 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-:root {
-    --primary-color: #e65a97; /* Rose Pink */
-    --secondary-color: #ff9ecf; /* Soft Pink */
-    --accent-color: #ff6fb5; /* Bright Pink */
-    --text-dark: #333; /* Dark Text */
-    --text-light: #666; /* Medium Gray */
-    --light-bg: #fff7fb; /* Light Background */
-    --card-bg: #ffffff; /* Card Background */
+/* :root {
+    --primary-color: #A45C40;    
+    --secondary-color: #E4B7A0;  
+    --accent-color: #C38370;     
+    --text-dark: #2D1B14;        
+    --text-light: #6B5B55;
+    --light-bg: #FAF7F2;         
+    --card-bg: #ffffff;
     --white: #ffffff;
-    --black: #222;
+    --black: #1E120E;            
+} */
+
+:root {
+    /* Premium Champagne Rose Gold Theme */
+    --primary-color: #C9A063;    
+    --secondary-color: #F3E8D5;   
+    --accent-color: #B8895B;      
+
+    --text-dark: #2B1E16;        
+    --text-light: #6F5B4F;        
+
+    --light-bg: #FBF7F2;          
+    --card-bg: #FFFFFF;
+
+    --white: #FFFFFF;
+    --black: #1A1411;            
 }
+
 
 body {
     background-color: var(--light-bg);
@@ -227,7 +244,7 @@ nav ul li a:hover::after {
 
 /* Section Styles */
 section {
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
 .section-title {
@@ -263,6 +280,10 @@ section {
     margin: 25px auto 0;
     font-size: 18px;
     font-weight: 400;
+}
+
+#s2{
+    padding-top: 2rem;
 }
 
 /* Features Section */
@@ -332,6 +353,9 @@ section {
 }
 
 /* Services Preview */
+#services , #about ,#gallery ,#contact{
+    padding-top: 9rem;
+}
 .services-preview {
     background: linear-gradient(135deg, var(--light-bg) 0%, #ffeff7 100%);
 }
@@ -339,7 +363,7 @@ section {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 40px;
 }
 
 .service-card {
@@ -926,3 +950,23 @@ footer {
         padding: 25px;
     }
 }
+
+/* Base state: Hidden and slightly lower */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: blur(5px); /* Adds a premium soft focus effect */
+}
+
+/* Active state: Fully visible and in position */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+}
+
+/* Optional: Staggered animation for list items */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
