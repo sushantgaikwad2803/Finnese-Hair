@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* :root {
+:root {
     --primary-color: #A45C40;    
     --secondary-color: #E4B7A0;  
     --accent-color: #C38370;     
@@ -16,7 +16,7 @@
     --card-bg: #ffffff;
     --white: #ffffff;
     --black: #1E120E;            
-} */
+}
 
 :root {
     --primary-color: #C9A063;    
@@ -535,6 +535,10 @@ section {
 
 .about-image:hover img {
     transform: scale(1.05);
+}
+
+.team-grid1{
+    padding-top: 2rem;
 }
 
 /* Team Section */
