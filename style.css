@@ -18,7 +18,7 @@
     --black: #1E120E;            
 }
 
-:root {
+/* :root {
     --primary-color: #C9A063;    
     --secondary-color: #F3E8D5;   
     --accent-color: #B8895B;      
@@ -31,7 +31,7 @@
 
     --white: #FFFFFF;
     --black: #1A1411;            
-}
+} */
 
 
 body {
@@ -973,4 +973,5 @@ footer {
 /* Optional: Staggered animation for list items */
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
+
 .delay-3 { transition-delay: 0.3s; }
