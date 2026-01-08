@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="gallery/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <!-- Header -->
@@ -43,7 +42,7 @@
             </div>
             
             <!-- Slide 2 -->
-            <div class="slide" style="background-image: url(gallery/s11.jpg);">
+            <div class="slide" style="background-image: url(gallery/h3.jpg);">
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h1>Premium Hair Services</h1>
@@ -84,7 +83,7 @@
         </div>
         
         <!-- Features Section -->
-        <section  >
+        <section>
             <div class="container">
                 <div class="section-title reveal">
                     <h2>Why Choose Finesse</h2>
@@ -179,62 +178,281 @@
     <section id="services" class="page">
         <div class="container">
             <div class="section-title reveal">
-                <h2>Our Services</h2>
-                <p>We offer a wide range of hair and beauty services to help you look and feel your best.</p>
+                <h2>Our Premium Services</h2>
+                <p>Experience luxury with our comprehensive range of hair and beauty treatments. For personalized pricing and consultations, please contact us directly.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card reveal delay-1" id="hair">
+
+            <!-- Service Categories with Filter -->
+            <div class="service-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Services</button>
+                <button class="filter-btn" data-filter="women-hair">Women's Hair</button>
+                <button class="filter-btn" data-filter="men-hair">Men's Hair</button>
+                <button class="filter-btn" data-filter="beauty">Beauty & Facial</button>
+                <button class="filter-btn" data-filter="spa">Spa & Wellness</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="special">Special Treatments</button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid services-full-grid">
+                <!-- Women's Hair Services -->
+                <div class="service-card reveal delay-1" data-category="women-hair">
                     <div class="service-img">
-                        <img src="gallery/s15.jpeg" alt="Hair Styling">
+                        <img src="gallery/s6.webp" alt="Haircut & Styling">
+                        <div class="service-category-label">Women's Hair</div>
                     </div>
                     <div class="service-content">
-                        <h3>Hair Styling</h3>
-                        <p>From classic cuts to modern trends, our stylists create looks that complement your personality.</p>
+                        <h3>Haircut & Styling</h3>
+                        <p>From classic cuts to modern trends, including U-cuts, straight cuts, fringe styling, and kids' haircuts. Expert styling by Naeem Khan and Rinku Sheth.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Expert Stylists</span>
+                            <span><i class="fas fa-check"></i> Personalized Consultation</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card reveal delay-2">
+
+                <div class="service-card reveal delay-2" data-category="women-hair">
                     <div class="service-img">
-                        <img src="gallery/s14.jpg" alt="Hair Coloring">
+                        <img src="gallery/s14.jpg" alt="Hair Wash & Blowdry">
+                        <div class="service-category-label">Women's Hair</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hair Wash & Blowdry</h3>
+                        <p>Premium hair wash services for all lengths including baby, shoulder, waist, and extra long hair. Keratin and premium treatments available.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> All Hair Lengths</span>
+                            <span><i class="fas fa-check"></i> Premium Products</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-3" data-category="women-hair">
+                    <div class="service-img">
+                        <img src="gallery/s4.webp" alt="Hair Coloring">
+                        <div class="service-category-label">Women's Hair</div>
                     </div>
                     <div class="service-content">
                         <h3>Hair Coloring</h3>
-                        <p>Transform your look with our expert coloring services using premium products.</p>
+                        <p>Transform your look with root touch-ups, global coloring, ammonia-free options, and long touch-up services for shoulder-length and longer hair.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Ammonia Free Options</span>
+                            <span><i class="fas fa-check"></i> Professional Colorists</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card reveal delay-3">
+
+                <!-- Men's Hair Services -->
+                <div class="service-card reveal delay-1" data-category="men-hair">
+                    <div class="service-img">
+                        <img src="gallery/s10.jpg" alt="Men's Haircut">
+                        <div class="service-category-label">Men's Hair</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Men's Haircut & Styling</h3>
+                        <p>Professional haircuts by Naeem Khan, regular and advanced cuts, child haircuts, and complete grooming services for the modern gentleman.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Expert Barbers</span>
+                            <span><i class="fas fa-check"></i> Modern Styles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-2" data-category="men-hair">
+                    <div class="service-img">
+                        <img src="gallery/s11.jpg" alt="Men's Grooming">
+                        <div class="service-category-label">Men's Hair</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Shaving & Grooming</h3>
+                        <p>Traditional clean shave, French beard styling, beard trimming, head shave designs, and complete grooming packages for special occasions.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Traditional Techniques</span>
+                            <span><i class="fas fa-check"></i> Precision Grooming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beauty & Facial Services -->
+                <div class="service-card reveal delay-3" data-category="beauty">
                     <div class="service-img">
                         <img src="gallery/s16.jpg" alt="Facial Treatments">
+                        <div class="service-category-label">Beauty & Facial</div>
                     </div>
                     <div class="service-content">
                         <h3>Facial Treatments</h3>
-                        <p>Rejuvenate your skin with our customized facial treatments for a radiant glow.</p>
+                        <p>Skin tightening, fruit facials, instant glow, anti-aging, tan clear, Korean facials, and hydra facials using premium VLCC, Richfeel, and Cheryls products.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Customized Treatments</span>
+                            <span><i class="fas fa-check"></i> Premium Brands</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card reveal delay-1">
+
+                <div class="service-card reveal delay-1" data-category="beauty">
+                    <div class="service-img">
+                        <img src="gallery/s17.jpg" alt="Threading">
+                        <div class="service-category-label">Beauty & Facial</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Threading Services</h3>
+                        <p>Precision eyebrow shaping, chin and forehead threading, upper and lower lip threading, and complete face clean-up services.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Expert Techniques</span>
+                            <span><i class="fas fa-check"></i> Sanitary Practices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-2" data-category="beauty">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Clean-up & Bleach">
+                        <div class="service-category-label">Beauty & Facial</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Clean-up & Bleach</h3>
+                        <p>Regular clean-up, D-Tan treatments, Oxy-clean, Richfeel clean-up, face masks, and various bleaching options including gold bleach and charcoal treatments.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Deep Cleansing</span>
+                            <span><i class="fas fa-check"></i> Brightening Results</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spa & Wellness Services -->
+                <div class="service-card reveal delay-3" data-category="spa">
+                    <div class="service-img">
+                        <img src="gallery/s7.jpeg" alt="Massage Therapy">
+                        <div class="service-category-label">Spa & Wellness</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Massage Therapy</h3>
+                        <p>Head massage with coconut oil, dandruff/hairfall treatment, style aroma massage, back massage, and soothing body oil massage for complete relaxation.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Therapeutic</span>
+                            <span><i class="fas fa-check"></i> Relaxing Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-1" data-category="spa">
                     <div class="service-img">
                         <img src="gallery/s9.jpg" alt="Manicure & Pedicure">
+                        <div class="service-category-label">Spa & Wellness</div>
                     </div>
                     <div class="service-content">
                         <h3>Manicure & Pedicure</h3>
-                        <p>Pamper your hands and feet with our luxurious nail care services.</p>
+                        <p>Regular and spa manicure/pedicure, D-Tan advance treatments, paraffin therapy, foot massage, heel peel pedicure, and refreshing spa treatments.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Luxury Experience</span>
+                            <span><i class="fas fa-check"></i> Professional Care</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card reveal delay-2">
+
+                <div class="service-card reveal delay-2" data-category="spa">
                     <div class="service-img">
-                        <img src="gallery/s5.jpg" alt="Makeup Artistry">
+                        <img src="gallery/s18.jpeg" alt="Body Waxing">
+                        <div class="service-category-label">Spa & Wellness</div>
                     </div>
                     <div class="service-content">
-                        <h3>Makeup Artistry</h3>
-                        <p>From natural day looks to glamorous evening makeup for special occasions.</p>
+                        <h3>Waxing Services</h3>
+                        <p>Complete body waxing including face, underarms, hands, legs, chest, back, stomach, and bikini area with normal and flavored wax options.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Smooth Results</span>
+                            <span><i class="fas fa-check"></i> Comfortable Process</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card reveal delay-3">
+
+                <!-- Makeup Services -->
+                <div class="service-card reveal delay-3" data-category="makeup">
                     <div class="service-img">
-                        <img src="gallery/s7.jpeg" alt="Spa Treatments">
+                        <img src="gallery/s20.jpg" alt="Bridal Makeup">
+                        <div class="service-category-label">Makeup</div>
                     </div>
                     <div class="service-content">
-                        <h3>Spa Treatments</h3>
-                        <p>Relax and rejuvenate with our range of therapeutic spa treatments.</p>
+                        <h3>Bridal Makeup</h3>
+                        <p>Specialized bridal packages including screen bridal, HD bridal makeup, and airbrush bridal makeup by Rinku Sheth and team for your perfect wedding day.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> By Rinku Sheth</span>
+                            <span><i class="fas fa-check"></i> International Artist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-1" data-category="makeup">
+                    <div class="service-img">
+                        <img src="gallery/s5.jpg" alt="Party Makeup">
+                        <div class="service-category-label">Makeup</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Party & Occasion Makeup</h3>
+                        <p>Light makeup for everyday wear, party makeup (mid to heavy), groom makeup, and complete makeover packages for all your special occasions.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Custom Looks</span>
+                            <span><i class="fas fa-check"></i> Premium Products</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Treatments -->
+                <div class="service-card reveal delay-2" data-category="special">
+                    <div class="service-img">
+                        <img src="gallery/s19.webp" alt="Protein Treatments">
+                        <div class="service-category-label">Special Treatments</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Protein Treatments</h3>
+                        <p>Cysteine, keratin, nanoplastia, and botox treatments for hair of all lengths. Transform your hair with our premium smoothing and straightening services.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Long-lasting Results</span>
+                            <span><i class="fas fa-check"></i> Premium Formulas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-3" data-category="special">
+                    <div class="service-img">
+                        <img src="gallery/s21.webp" alt="Anti-Frizz Treatment">
+                        <div class="service-category-label">Special Treatments</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Anti-Frizz Treatments</h3>
+                        <p>Hair spa with Olaplex, premium hair spa styles, smoothening, and rebonding treatments for frizz-free, manageable hair of all lengths.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Frizz Control</span>
+                            <span><i class="fas fa-check"></i> Smooth Texture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-1" data-category="special">
+                    <div class="service-img">
+                        <img src="gallery/s22.jpg" alt="Curly Hair Care">
+                        <div class="service-category-label">Special Treatments</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Curly Hair Care</h3>
+                        <p>Specialized services for curly hair types (2A-4C) including wash & style, haircut & styling, deep nourish treatments, and perming services.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Curly Hair Experts</span>
+                            <span><i class="fas fa-check"></i> Specialized Products</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal delay-2" data-category="special">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Scalp Treatment">
+                        <div class="service-category-label">Special Treatments</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Scalp & Hair Treatment</h3>
+                        <p>Dandruff matrix treatments, hair loss treatments with Argan essence, highlights, color services, and special hair/scalp treatments with natural oils.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Therapeutic</span>
+                            <span><i class="fas fa-check"></i> Natural Ingredients</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -253,7 +471,7 @@
                     <h3>Our Story</h3>
                     <p>Founded in 2010, Finesse Hair & Beauty Salon is dedicated to providing exceptional beauty services in a luxurious and welcoming environment.</p>
                     <p>Our founder, Rinku Sheth, envisioned a space where clients could escape the stresses of daily life and truly indulge in self-care. Over the years, we have built a reputation for excellence by combining traditional techniques with the latest trends in hair and beauty.</p>
-                    <p>At Finesse, we believe that everyone deserves to feel beautiful and confident. Our team of certified professionals undergoes continuous training to stay at the forefront of the industry. We take the time to understand your unique needs and preferences, ensuring that you leave our salon looking and feeling your absolute best..</p>
+                    <p>At Finesse, we believe that everyone deserves to feel beautiful and confident. Our team of certified professionals undergoes continuous training to stay at the forefront of the industry. We take the time to understand your unique needs and preferences, ensuring that you leave our salon looking and feeling your absolute best.</p>
                 </div>
                 <div class="about-image reveal delay-1">
                     <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Finnese Salon Interior">
@@ -441,6 +659,9 @@
                                 <option value="manicure">Manicure</option>
                                 <option value="pedicure">Pedicure</option>
                                 <option value="mens-grooming">Men's Grooming</option>
+                                <option value="bridal">Bridal Makeup</option>
+                                <option value="spa">Spa Treatment</option>
+                                <option value="special">Special Treatment</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -487,6 +708,7 @@
                         <li><a href="#" data-page="services">Manicure & Pedicure</a></li>
                         <li><a href="#" data-page="services">Makeup Artistry</a></li>
                         <li><a href="#" data-page="services">Spa Treatments</a></li>
+                        <li><a href="#" data-page="services">Special Treatments</a></li>
                     </ul>
                 </div>
             </div>
